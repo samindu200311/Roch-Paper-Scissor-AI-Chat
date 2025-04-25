@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors 🤖 + AI Jokes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <h1>Rock Paper Scissors</h1>
+
+    <div id="gameControls">
+      <button id="startButton" onclick="startGame()">Start Game</button>
+      <div id="countdown"></div>
+    </div>
+
+    <div id="scoreboard">
+      🧑 You: <span id="playerScore">0</span> |
+      👩‍🦰 Opponent: <span id="aiScore">0</span>
+    </div>
+
+    <div id="game">
+      <button onclick="play('rock')" disabled>🛑 Rock</button>
+      <button onclick="play('paper')" disabled>📄 Paper</button>
+      <button onclick="play('scissors')" disabled>✂️ Scissors</button>
+    </div>
+
+    <div id="result"></div>
+    <div id="aiChatBubble">
+      <span id="aiComment">🤖 Waiting to make a move...</span>
+    </div>
+
+    <div id="roundsRemaining">Rounds Remaining: <span id="roundCount">10</span></div>
+
+    <div id="musicControl">
+      <button onclick="toggleMusic()">🔊 Toggle Music</button>
+      <audio id="backgroundMusic" loop>
+        <source src="/bg-music/music-1.mp3" type="audio/mp3">
+      </audio>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="winSound" src="win.mp3"></audio>
+    <audio id="loseSound" src="lose.mp3"></audio>
+    <audio id="drawSound" src="draw.mp3"></audio>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
